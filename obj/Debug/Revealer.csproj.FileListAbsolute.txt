@@ -1,0 +1,17 @@
+C:\development\git\Revealer\bin\Revealer.dll
+C:\development\git\Revealer\bin\Revealer.pdb
+C:\development\git\Revealer\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\development\git\Revealer\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\development\git\Revealer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\development\git\Revealer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\development\git\Revealer\bin\Microsoft.Web.Infrastructure.dll
+C:\development\git\Revealer\bin\Newtonsoft.Json.dll
+C:\development\git\Revealer\bin\Owin.dll
+C:\development\git\Revealer\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\development\git\Revealer\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\development\git\Revealer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\development\git\Revealer\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\development\git\Revealer\bin\Newtonsoft.Json.xml
+C:\development\git\Revealer\obj\Debug\Revealer.csprojResolveAssemblyReference.cache
+C:\development\git\Revealer\obj\Debug\Revealer.dll
+C:\development\git\Revealer\obj\Debug\Revealer.pdb
