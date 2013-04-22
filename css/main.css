@@ -1,0 +1,26 @@
+/*Fix for displaying shadows in left panel correctly*/
+/* Reveal menu shadow on top of the list items */
+/* General rules overriding default behaviour */
+.ui-panel-display-reveal {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open,
+.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open {
+	-webkit-box-shadow: -5px 0 5px rgba(0,0,0,.10);
+	-moz-box-shadow: -5px 0 5px rgba(0,0,0,.10);
+	box-shadow: -5px 0 5px rgba(0,0,0,.10);
+}
+/* Reveal menu shadow on top of the list items */
+/* Page Specific rules */
+#firstpage .ui-panel-display-reveal {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none; 
+    box-shadow: none;
+   }
+#firstpage .ui-panel-content-wrap-position-left {
+      -webkit-box-shadow: -5px 0px 5px rgba(0,0,0,.15); 
+      -moz-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+      box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+}
