@@ -38,25 +38,35 @@
     <body>
         <!-- First page -->
 		<div id="firstpage" data-role="page" >
+
+            <!-- Left Panel -->
+            <div data-role="panel" id="leftpanel" data-position="left" data-display="push" data-swipe-close="true" data-theme="b">
+                <div class="panel-content">
+                    <a href="#firstpage" data-rel="close" data-role="button" data-theme="c" data-icon="delete" data-inline="true">Close panel</a>
+                    
+                </div><!-- /content wrapper for padding -->
+            </div><!-- /Left Panel -->
+
 			<!-- Start Header -->
 			<header data-role="header" >
+                <a href="#leftpanel" class="ui-icon-nodisc" data-role="button" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" data-corners="true">Panel</a>
 				<h1>Revealer App</h1>
-			</header><!--/end-->
+			</header><!--/Header-->
 
 			<!-- Start Content -->
 			<div data-role="content">
 				<!-- Stopwatch containter -->
 				<div>
 					<span id="watchdisplay">00:00:00.0</span>
-				</div> <!-- /end -->
+				</div> <!-- /Stopwatch -->
 
 				<!-- Presentation controllers -->
-				<!--Button to start timer and presentation-->
+				<!--Present Button to start timer and presentation-->
 				<div class="ui-grid-solo">
 					<div class="ui-block-a">
 						<input type="button" onclick="myWatch.start()" value="Present" />
 					</div>
-				</div> <!--/end-->
+				</div> <!--/Present-->
                 <!-- Direction controllers (Next, Previous, Up, Down) -->
 				<div class="ui-grid-b">
 				  <div class="ui-block-a"></div>
@@ -68,7 +78,7 @@
 				  <div class="ui-block-a"></div>
 				  <div class="ui-block-b"><a href="#" data-role="button">Down</a></div>
 				  <div class="ui-block-c"></div>
-				</div> <!--/end-->
+				</div> <!--/Direction-->
 
 				<!-- Stopwatch controllers -->
 				<div class="ui-grid-solo">
@@ -76,7 +86,7 @@
 						<input type="button" onclick="myWatch.stop()" value="Pause" />
 						<input type="button" onclick="myWatch.reset()" value="Stop" />
 					</div>
-				</div> <!-- /end -->
+				</div> <!-- /Stopwatch -->
                 <!-- End Presentation Controllers -->
 
 			</div>
