@@ -7,6 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="hakimel-reveal.js-ba94476/css/reveal.min.css" />
     <link rel="stylesheet" href="hakimel-reveal.js-ba94476/css/theme/default.css" id="theme" />
+
+    <!-- SignalR related -->
+    <script src="/Scripts/jquery-1.9.1.js"></script>
+    <script src="/Scripts/jquery.signalR-1.0.1.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script>
+        $(window).on('load', function () {
+
+            var chat = $.connection.chatHub;
+            $.connection.hub.start();
+            chat.client.broadcastMessage = function (message) {
+
+                if (message == 'up') {
+                    Reveal.navigateUp();
+                }
+
+                if (message == 'prev') {
+                    Reveal.navigateLeft();
+                }
+
+                if (message == 'next') {
+                    Reveal.navigateRight();
+                }
+
+                if (message == 'down') {
+                    Reveal.navigateDown();
+                }
+
+            };
+
+        });
+    </script>
+
 </head>
 <body>
 

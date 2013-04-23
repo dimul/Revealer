@@ -36,9 +36,41 @@
     <script src="Scripts/plugins.js"></script>
     <!-- Add script here --> 
     <script type="text/javascript">
-        $(function () {
+        
+        $(window).on('load', function () {
             
+            var chat = $.connection.chatHub;
+            $.connection.hub.start().done(function () {
+
+                var $btn_up = $('.btn-up');
+                var $btn_prev = $('.btn-prev');
+                var $btn_next = $('.btn-next');
+                var $btn_down = $('.btn-down');
+
+                $btn_up.on('click', function (e) {
+                    e.preventDefault();
+                    chat.server.send('up');
+                });
+
+                $btn_prev.on('click', function (e) {
+                    e.preventDefault();
+                    chat.server.send('prev');
+                });
+
+                $btn_next.on('click', function (e) {
+                    e.preventDefault();
+                    chat.server.send('next');
+                });
+
+                $btn_down.on('click', function (e) {
+                    e.preventDefault();
+                    chat.server.send('down');
+                });
+
+            });
+
         });
+
         // StopWatch Listener and Handler, triggers on click:
         function updateClockDisplay(watch) {
             document.getElementById('watchdisplay').innerHTML = watch.toString() + "." + parseInt(watch.getElapsed().milliseconds / 100);
@@ -83,13 +115,13 @@
                 <!-- Direction controllers (Up, Prev, Next, Down) -->
 				<div class="ui-grid-b">
 				  <div class="ui-block-a"></div>
-				  <div class="ui-block-b"><a href="#" data-role="button">Up</a></div>
+				  <div class="ui-block-b"><a href="#" data-role="button" class="btn-up">Up</a></div>
 				  <div class="ui-block-c"></div>
-				  <div class="ui-block-a"><a href="#" data-role="button">Prev</a></div>
+				  <div class="ui-block-a"><a href="#" data-role="button" class="btn-prev">Prev</a></div>
 				  <div class="ui-block-b"></div>
-				  <div class="ui-block-c"><a href="#" data-role="button">Next</a></div>
+				  <div class="ui-block-c"><a href="#" data-role="button" class="btn-next">Next</a></div>
 				  <div class="ui-block-a"></div>
-				  <div class="ui-block-b"><a href="#" data-role="button">Down</a></div>
+				  <div class="ui-block-b"><a href="#" data-role="button" class="btn-down">Down</a></div>
 				  <div class="ui-block-c"></div>
 				</div> <!--/Direction controllers-->
 
