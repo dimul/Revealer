@@ -24,3 +24,33 @@
       -moz-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
       box-shadow: -5px 0px 5px rgba(0,0,0,.15);
 }
+
+
+.btn-prev .ui-btn-inner, .btn-next .ui-btn-inner{ padding: 1.5em 20px; }
+.remote-control-ui { margin:0; }
+
+.ui-block-b { position:relative; }
+.btn-overview { padding:22px; position:absolute; top:0; left:50%; margin-left:-34px !important; }
+.btn-overview .ui-btn-inner { border-top:0 }
+
+.ui-body-c, .ui-overlay-c {
+border: 0;
+color: #333 /*{c-body-color}*/;
+text-shadow: 0 /*{c-body-shadow-x}*/ 1px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #fff /*{c-body-shadow-color}*/;
+background: #ccc/*{c-body-background-color}*/;
+background-image: -webkit-gradient(linear, left top, left bottom, from( #181818 /*{c-body-background-start}*/), to( #333333 /*{c-body-background-end}*/));
+background-image: -webkit-linear-gradient( #181818 /*{c-body-background-start}*/, #333333 /*{c-body-background-end}*/);
+background-image: -moz-linear-gradient( #181818 /*{c-body-background-start}*/, #333333 /*{c-body-background-end}*/);
+background-image: -ms-linear-gradient( #181818 /*{c-body-background-start}*/, #333333 /*{c-body-background-end}*/);
+background-image: -o-linear-gradient( #181818 /*{c-body-background-start}*/, #333333 /*{c-body-background-end}*/);
+background-image: linear-gradient( #181818 /*{c-body-background-start}*/, #333333 /*{c-body-background-end}*/);
+}
+
+.stopwatch { text-align:center; margin-top:20px; }
+.stopwatch h1 { text-shadow: none; font-size:68px; margin:0;
+color: #396b9e;
+background: -webkit-linear-gradient(#5f9cc5, #396b9e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
