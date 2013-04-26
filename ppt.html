@@ -1,17 +1,25 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <title>Ppt test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Demo Presentation with jQuery Mobile, Reveal.js &amp; SignalR</title>
+
+    <meta name="description" content="Revealer Web Service that will power up your presentations. Powered by SignalR, jQuery Mobile">
+    <meta name="author" content="Motiejus Bagdonas &amp; Dmitri Sergejenkov">
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="hakimel-reveal.js-ba94476/css/reveal.min.css" />
-    <link rel="stylesheet" href="hakimel-reveal.js-ba94476/css/theme/default.css" id="theme" />
+    
 
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/default.css" id="theme" />
+  
     <!-- SignalR related -->
-    <script src="/Scripts/jquery-1.9.1.js"></script>
-    <script src="/Scripts/jquery.signalR-1.0.1.js"></script>
-    <script src="/signalr/hubs"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/jquery.signalR-1.0.1.js"></script>
+    <script src="signalr/hubs"></script>
     <script>
         $(window).on('load', function () {
 
@@ -49,31 +57,78 @@
 
     <div class="reveal">
         <div class="slides">
-            <section>Single Horizontal Slide</section>
-            <section>
-                <section>Vertical Slide 1</section>
-                <section>Vertical Slide 2</section>
+            <!-- First demo slide -->
+            <section data-transition="cube">
+                <p><small>Motiejus Bagdonas &amp; Dmitri Sergejenkov</small></p>
+                <h1>Demo Presentation</h1>
+                <h3>Revealer - Mobile Web Remote Control App</h3>
+                <p><small>with</small></p>
+                <h4>jQuery Mobile, SignalR &amp; Reveal.js </h4>
             </section>
-            <section>Single Horizontal Slide 2</section>
-            <section>Single Horizontal Slide 3</section>
-            <section>Single Horizontal Slide 4</section>
+
+            <!-- Second demo Slide  -->
+            <section data-transition="page">
+                <!-- Vertical demo slide 1 -->
+                <section>
+                    <h2>Demonstration</h2>
+                    <p>If you made this far, it means that you are on Preface of our Mobile Platforms Report</p>
+                    <p><small>Push down</small></p>
+                </section>
+                <!-- Vertical demo slide 2 -->
+                <section>
+                    <h2>Navigation</h2>
+                    <p>Try navigating to different sides</p>
+                    <p><small>Go further down</small></p>
+                </section>
+                <section>
+                    <h2>Reveal.js</h2>
+                    <p>This presentation is powered by reveal.js framework brought to us by Hakimel El Hattab</p>
+                    <p><small>Now you can go right and left or back up</small></p>
+                </section>
+            </section>
+
+            <!-- Third demo Slide -->
+            <section data-transition="zoom">
+                <h2>Know what you use</h2>
+                <ul>
+                    <li>WebSockets technology makes it possible</li>
+                    <li>Communication is brought to you by SignalR</li>
+                </ul>
+            </section>
+            <!-- Fourth demo Slide -->
+            <section data-transition="fade">
+                <h2>jQuery Mobile</h2>
+                <p>Mobile Web app is brought to you with help of
+                <a href="http://jquerymobile.com/">jQuery Mobile</a></p>
+
+            </section>
+            <!-- Fifth demo Slide -->
+            <section>
+                <h1>Stay connected</h1>
+                <h3>More details coming soon near you</h3>
+                <h4>KEA Examinations</h4>
+                <p><small>be there on</small></p>
+                <p>01 / 05 / 2013</p>
+
+            </section>
         </div>
     </div>
 
-    <script src="hakimel-reveal.js-ba94476/lib/js/head.min.js"></script>
-    <script src="hakimel-reveal.js-ba94476/js/reveal.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="Scripts/reveal.js"></script>
 
     <script>
 
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        controls: true,
+        controls: false,
         progress: true,
         history: true,
         center: true,
-        theme: 'default', // available themes are in /css/theme
-        transition: 'default' // default/cube/page/concave/zoom/linear/fade/none
+        loop:true,
+        // theme: 'sky', // available themes are in /css/theme
+        // transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
     });
 
 	</script>

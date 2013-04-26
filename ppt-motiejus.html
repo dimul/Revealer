@@ -1,17 +1,24 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Ppt test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Demo Presentation with jQueryMobile, Reveal.js &amp; SignalR</title>
+
+    <meta name="description" content="Revealer Web Service that will power up your presentations. Powered by SignalR, jQuery Mobile">
+    <meta name="author" content="Motiejus Bagdonas">
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="hakimel-reveal.js-ba94476/css/reveal.min.css" />
-    <link rel="stylesheet" href="hakimel-reveal.js-ba94476/css/theme/default.css" id="theme" />
+    
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/default.css" id="theme" />
 
     <!-- SignalR related -->
-    <script src="/Scripts/jquery-1.9.1.js"></script>
-    <script src="/Scripts/jquery.signalR-1.0.1.js"></script>
-    <script src="/signalr/hubs"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/jquery.signalR-1.0.1.js"></script>
+    <script src="signalr/hubs"></script>
     <script>
         $(window).on('load', function () {
 
@@ -49,19 +56,24 @@
 
     <div class="reveal">
         <div class="slides">
+            <!-- First Slide  -->
             <section>Single Horizontal Slide</section>
+            <!-- Second Slide -->
             <section>
                 <section>Vertical Slide 1</section>
                 <section>Vertical Slide 2</section>
             </section>
+            <!-- Third Slide -->
             <section>Single Horizontal Slide 2</section>
+            <!-- Fourth Slide -->
             <section>Single Horizontal Slide 3</section>
+            <!-- Fifth Slide -->
             <section>Single Horizontal Slide 4</section>
         </div>
     </div>
 
-    <script src="hakimel-reveal.js-ba94476/lib/js/head.min.js"></script>
-    <script src="hakimel-reveal.js-ba94476/js/reveal.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="Scripts/reveal.js"></script>
 
     <script>
 
@@ -72,8 +84,8 @@
         progress: true,
         history: true,
         center: true,
-        theme: 'beige', // available themes are in /css/theme
-        transition: 'default' // default/cube/page/concave/zoom/linear/fade/none
+        // theme: 'beige', // available themes are in /css/theme
+        // transition: 'default' // default/cube/page/concave/zoom/linear/fade/none
     });
 
 	</script>
