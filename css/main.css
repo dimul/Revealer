@@ -12,7 +12,7 @@
 	-moz-box-shadow: -5px 0 5px rgba(0,0,0,.10);
 	box-shadow: -5px 0 5px rgba(0,0,0,.10);
 }
-/* Reveal menu shadow on top of the list items */
+/* Reveal side menu shadow on top of the list items */
 /* Page Specific rules */
 #firstpage .ui-panel-display-reveal {
     -webkit-box-shadow: none;

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Demo Presentation with jQuery Mobile, Reveal.js &amp; SignalR</title>
+
+    <meta name="description" content="Revealer Web Service that will power up your presentations. Powered by SignalR, jQuery Mobile">
+    <meta name="author" content="Dmitri Sergejenkov">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Presentation Framework css -->
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/default.css" id="theme" />
+    <!-- For code highlight -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <!-- SignalR related -->
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/jquery.signalR-1.0.1.js"></script>
+    <script src="signalr/hubs"></script>
+    <script>
+        $(window).on('load', function () {
+
+            var chat = $.connection.chatHub;
+            $.connection.hub.start();
+            chat.client.broadcastMessage = function (message) {
+
+                if (message == 'up') {
+                    Reveal.navigateUp();
+                }
+
+                if (message == 'prev') {
+                    Reveal.navigateLeft();
+                }
+
+                if (message == 'next') {
+                    Reveal.navigateRight();
+                }
+
+                if (message == 'down') {
+                    Reveal.navigateDown();
+                }
+
+                if (message == 'overview') {
+                    Reveal.toggleOverview();
+                }
+            };
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+            <!-- First Slide  -->
+            <section>
+                <p>Dmitri Sergejenkov</p>
+                <h1><p>Mobile Platforms</p></h1>
+                <p><small>presentation</small></p>
+                <h3>Revealer Mobile Web App</h3>
+                <small>with</small>
+                <p>Jquey Mobile &amp; SignalR</p>
+                <br>
+                <h5><small>01 / 05 / 2013</small></h5>
+            </section>
+            <!-- Second Slide -->
+            <section>
+                <section>
+                    <h1>Revealer App</h1>
+                    <br>
+                    <p>Mobile Web App for Controlling your presentations</p>
+                </section>
+                <section>
+                    <h3>What makes it work?</h3>
+                    <img src="dimul-ppt/what.jpg">
+                </section>
+                <section>
+                    <h3>Three main Technologies</h3>
+                    <ul>
+                        <li>jQuery Mobile</li>
+                        <li>HTML5</li>
+                        <li>SignalR</li>
+                    </ul>
+                    <p>
+                        <img width="390" height="100" src="dimul-ppt/jquery-logo.png" alt="jQueryMobileLogo">
+                        <img width="100" height="100" src="dimul-ppt/html5.png" alt="HTML5logo">
+                        <img width="100" height="100" src="dimul-ppt/signalr.png" alt="SignalRlogo">
+                    <p>
+                </section>
+                <section>
+                    <h3>Future Development ?</h3>
+                    <br>
+                    <ul>
+                        <li>Big potential</li>
+                        <br>
+                        <li>Lack of Resources</li>
+                    </ul>
+                    
+                    
+                    <p><img width="377" height="250" src="dimul-ppt/future-development.jpg" alt="FutureDevelopmentPicture"></p>
+                </section>
+            </section>
+            <!-- Third Slide -->
+            <section>
+                <section>
+                    <h2>How it looks in a code?</h2>
+                </section>
+                <section>
+                    <h3>jQuery Mobile and HTML5</h3>
+                    <p>Extensive use of custom "data-" Attributes</p>
+                    <pre>
+                        data-role="page" // Page identification 
+                        data-role="panel" //Panel Identification
+                        data-role="header" //Header
+                        data-theme="b" //Theme changer
+                        data-divider-theme="d"
+                        data-display="reveal" //Animation type
+                    </pre>
+                </section>
+            </section>
+            <!-- Fourth Slide -->
+            <section>
+                <h2>SignalR</h2>
+                <p>WebSockets technology with fallback to make bidirectional communication possible</p>
+            </section>
+            <!-- Fifth Slide -->
+            <section>
+                <h2>Time to look into source code</h2> 
+                <h3><small>and</small></h3>
+                <h3>ask questions</h3>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="Scripts/reveal.js"></script>
+
+    <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        rtl: false,
+        theme: 'default', // available themes are in /css/theme
+        transitionSpeed: 'slow',
+        width: 960,
+        height: 700,
+        minScale: 0.1,
+        maxScale: 1.0
+        // transition: 'default' // default/cube/page/concave/zoom/linear/fade/none
+
+    });
+
+	</script>
+
+</body>
+</html>
